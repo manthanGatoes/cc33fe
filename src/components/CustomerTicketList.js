@@ -11,7 +11,7 @@ export default function CustomerTicketList({ onTicketClick }) {
     fetchMyTickets();
 
     const stompClient = new Client({
-      webSocketFactory: () => new SockJS('http://localhost:8080/ws'),
+      webSocketFactory: () => new SockJS('http://35.154.32.48:8080/ws'),
       onConnect: () => {
         stompClient.subscribe('/topic/tickets', () => {
           fetchMyTickets();

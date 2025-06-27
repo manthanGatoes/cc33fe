@@ -9,7 +9,7 @@ export default function CreateTicketForm({ onCreated }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await api.post('/api/tickets', {
+      await api.post('/api/tickets', {
         subject,
         description,
         priority,
